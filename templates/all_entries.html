@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Resources</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>All Resources</h1>
+        
+        {% if entries %}
+        <ul>
+            {% for entry in entries %}
+                <li>
+                    <strong>Resource Name:</strong> {{ entry['Resource'] }}<br>
+                    <strong>Stanford Affiliated:</strong> {{ entry['Stanford Affiliated'] }}<br>
+                    <strong>Description:</strong> {{ entry['Description'] }}<br>
+                    <strong>Website:</strong> <a href="{{ entry['Link'] }}">{{ entry['Link'] }}</a><br>
+					<strong>Category:</strong> {{ entry['Category'] }}<br>
+                </li>
+                <hr>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No entries found for this category.</p>
+    {% endif %}
+        
+        <a href="/" class="button">Back to Home</a>
+    </div>
+</body>
+</html>
