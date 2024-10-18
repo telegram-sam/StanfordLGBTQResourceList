@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Adjust path as necessary -->
+    <title>Stanford LGBTQ+ Employees Resource List</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to the Stanford LGBTQ+ Employee Resources List</h1>
-        <h2>Select a Resource Category</h2>
-        <ul>
-            {% for category in categories %}
-            <li><a href="{{ url_for('category_view', category=category) }}">{{ category }}</a></li>
-            {% endfor %}
-            <li><a href="/all_entries">View All Entries</a></li>
-        </ul>
-    </div>
+	<h1>Stanford LGBTQ+ Employees Resource List</h1>
+	<h2>Find by Categories</h2>
+	<ul>
+	<li><a href='Healthcare Benefits.html'>Healthcare Benefits</a></li>
+	<li><a href='Employee Assistance Programs (EAPs).html'>Employee Assistance Programs (EAPs)</a></li>
+	<li><a href='Employee Resource Groups (ERGs) and Employee Activity Clubs.html'>Employee Resource Groups (ERGs) and Employee Activity Clubs</a></li>
+	<li><a href='Mental Health Counseling, Wellness, and Substance Cessation Programs.html'>Mental Health Counseling, Wellness, and Substance Cessation Programs</a></li>
+	<li><a href='Financial Counseling and Legal Services.html'>Financial Counseling and Legal Services</a></li>
+	<li><a href='Childcare Programs.html'>Childcare Programs</a></li>
+	<li><a href='On-site Amenities at a Stanford Campus.html'>On-site Amenities at a Stanford Campus</a></li>
+	</ul>
+	<h2><a href='all_resources.html'>View all resources alphabetically</a></h2>
+
+		<footer style="font-size: smaller; text-align: left; margin-top: 80px;">
+			Lovingly created and maintained by volunteers on the Stanford Medicine LBGTQ+ Subcommittee.
+			Last updated October 11, 2024 13:56:12
+		</footer>
 </body>
-</html>
