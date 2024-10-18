@@ -80,4 +80,4 @@ def all_entries():
     return render_template('all_entries.html', entries=data)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=True)
